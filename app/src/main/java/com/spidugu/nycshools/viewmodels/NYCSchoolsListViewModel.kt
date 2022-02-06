@@ -62,12 +62,17 @@ class NYCSchoolsListViewModel(var repository: IChaseRepository) : ViewModel() {
 
                 is ResponseResult.NetworkError -> {
                     withContext(Dispatchers.Main) {
-                        _showProgressBarData.value = View.GONE
-                        _showErrorInfoData.value = true
+                        onNetworkError()
                     }
                 }
             }
         }
+    }
+
+    private fun onNetworkError() {
+        _showProgressBarData.value = View.GONE
+        _showErrorInfoData.value = true
+        _showRefreshSpinner.value = false
     }
 
     /**
@@ -116,6 +121,13 @@ class NYCSchoolsListViewModel(var repository: IChaseRepository) : ViewModel() {
         _showRefreshSpinner.value = true
         _showErrorInfoData.value = false
         _showProgressBarData.value = View.GONE
+        fetchNYCSchoolsList()
+    }
+
+    fun onRetry() {
+        _showProgressBarData.value = View.VISIBLE
+        _showRefreshSpinner.value = false
+        _showErrorInfoData.value = false
         fetchNYCSchoolsList()
     }
 }

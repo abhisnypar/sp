@@ -40,6 +40,7 @@ class NYCSchoolsListFragment :
 
         vm.showErrorInfoLiveData.observe(viewLifecycleOwner) {
             binding.errorView.container.isVisible = it
+            binding.recyclerView.isVisible = !it
         }
 
         vm.showErrorInfoDataText.observe(viewLifecycleOwner) {
@@ -72,7 +73,7 @@ class NYCSchoolsListFragment :
         }
 
         binding.errorView.retryButton.setOnClickListener {
-            vm.onViewCreated()
+            vm.onRetry()
         }
     }
 
