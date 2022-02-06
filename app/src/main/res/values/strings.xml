@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">20220204-SAIPIDUGU-NYCSchools</string>
+    <string name="title_value">%1$s</string>
+
+    <!-- Error View-->
+    <string name="error_title">Something Went Wrong ! Please retry !</string>
+    <string name="retry">retry</string>
+
+    <!-- Detail Screen-->
+    <string name="screen_title">NYC Schools</string>
+    <string name="math_avg">Math Score %1$s</string>
+    <string name="writing_avg">Writing Score %1$s</string>
+    <string name="people">Test Takers %1$s</string>
+    <string name="reading">Reading Score %1$s</string>
+</resources>

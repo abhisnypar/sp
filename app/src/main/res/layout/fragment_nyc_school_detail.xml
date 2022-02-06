@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/text_size_20sp"
+    tools:context=".view.NYCSchoolDetailFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/school_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Amrita Viswa Vidya Peetham" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/detail_text_view"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/school_name"
+        tools:text="123445" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/total_test_takers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/detail_text_view"
+        android:drawableStart="@drawable/ic_people"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dbn"
+        tools:text="3456" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/reading_avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/detail_text_view"
+        android:drawableStart="@drawable/ic_baseline_chrome_reader_mode_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_test_takers"
+        tools:text="3456" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/math_avg"
+        style="@style/detail_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_calculate_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reading_avg"
+        tools:text="3456" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/writing_avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/detail_text_view"
+        android:drawableStart="@drawable/ic_write"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/math_avg"
+        tools:text="3456" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

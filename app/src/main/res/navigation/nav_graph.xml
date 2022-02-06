@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/landingFragment">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.spidugu.nycshools.view.NYCSchoolsListFragment"
+        android:label="landingFragment"
+        tools:layout="@layout/fragment_nyc_schools_list">
+
+        <action
+            android:id="@+id/action_landing_fragment_to_detail_fragment2"
+            app:destination="@id/detailFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.spidugu.nycshools.view.NYCSchoolDetailFragment"
+        android:label="detailFragment"
+        tools:layout="@layout/fragment_nyc_school_detail">
+
+        <argument
+            android:name="schoolInfo"
+            app:argType="com.spidugu.nycshools.repository.SchoolInfo" />
+
+        <action android:id="@+id/action_detailFragment_to_landingFragment"
+            app:destination="@+id/landingFragment"
+            app:popUpTo="@id/landingFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>
